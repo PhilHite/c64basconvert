@@ -1,0 +1,16 @@
+#!/bin/bash
+# c64basconvert
+# Wrapper script for c64basconvert.py
+# Place both this file and c64basconvert.py in the same directory,
+# then run the install commands below to make it available system-wide.
+#
+# Installation:
+#   chmod +x c64basconvert
+#   sudo cp c64basconvert /usr/local/bin/
+#   sudo cp c64basconvert.py /usr/local/bin/
+#
+# Usage:
+#   c64basconvert INPUTFILE.BAS OUTPUTFILE.PRG
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+python3 "$SCRIPT_DIR/c64basconvert.py" "$@"
